@@ -54,7 +54,7 @@ app.get(
 /** 9)  Get input from client - Route parameters */
 
 app.get('/:word/echo', function(req,res) {
-  res.json({"echo:" : req.params.word});
+  res.json({"echo" : req.params.word});
 });
 
 /** 10) Get input from client - Query parameters */
