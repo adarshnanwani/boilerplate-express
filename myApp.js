@@ -64,6 +64,8 @@ app.get('/:word/echo', function(req,res) {
 // /name?first=<firstname>&last=<lastname>
 app.route('/name').get(function(req,res){
   res.json({name: `${req.query.first} ${req.query.last}`})
+}).post(function(req,res) {
+ res.json({ name: `${req.body.first} ${req.body.last}` });
 });
 
 /** 11) Get ready for POST Requests - the `body-parser` */
